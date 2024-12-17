@@ -1,5 +1,3 @@
-
-
 import { cards } from "../../../../utils/cards";
 
 export default function StudyPage({ params }) {
@@ -15,14 +13,14 @@ export default function StudyPage({ params }) {
   }
 
   return (
-    <div className="py-36 px-20">
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+    <div className="py-12 px-4 sm:px-8 md:px-20">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
         Study Material for {card.title}
       </h1>
 
-      <div className="mt-4">
+      <div className="mt-6">
         {card.videos?.length ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4">
             {card.videos.map((video, index) => (
               <div key={index} className="bg-gray-800 p-4 rounded-lg">
                 <video

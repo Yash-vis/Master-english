@@ -19,21 +19,21 @@ export default function CardDetail({ card }) {
   };
 
   return (
-    <div className="py-36 px-20 bg-gradient-to-r from-black via-gray-800 to-black">
+    <div className="py-12 px-4 sm:px-8 md:px-20 bg-gradient-to-r from-black via-gray-800 to-black">
       <div>
-        <h1 className="text-4xl font-bold text-white">{card.title}</h1>
-        <p className="mt-4 text-lg text-gray-400">{card.description}</p>
+        <h1 className="text-3xl sm:text-4xl font-bold text-white">{card.title}</h1>
+        <p className="mt-4 text-base sm:text-lg text-gray-400">{card.description}</p>
       </div>
 
-      <div className="flex justify-between items-center my-6  p-6 rounded-lg shadow-xl">
+      <div className="flex flex-col sm:flex-row justify-between items-center my-6 p-6 rounded-lg shadow-xl space-y-6 sm:space-y-0">
         <img
           src={card.imageUrl}
           alt={card.title}
-          className="rounded-lg shadow-lg w-80 h-44 object-cover"
+          className="rounded-lg shadow-lg w-full sm:w-80 sm:h-44 object-cover"
         />
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center space-y-4">
           <button
-            className="p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-purple-600 hover:to-blue-500 border-2 border-white rounded-lg mb-4"
+            className="p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-purple-600 hover:to-blue-500 border-2 border-white rounded-lg"
             onClick={() => router.push("/enroll")}
           >
             Enroll Now
@@ -41,24 +41,24 @@ export default function CardDetail({ card }) {
         </div>
       </div>
 
-      <div className="mt-4 text-white">
-        <p className="text-xl font-medium">Course Duration: {card.duration}</p>
-        <p className="text-xl font-medium">Faculty: {card.faculty}</p>
+      <div className="mt-4 text-white space-y-2">
+        <p className="text-lg sm:text-xl font-medium">Course Duration: {card.duration}</p>
+        <p className="text-lg sm:text-xl font-medium">Faculty: {card.faculty}</p>
       </div>
 
-      <p className="mt-2 text-2xl font-bold text-yellow-500">Fee: ₹{card.fee}</p>
+      <p className="mt-2 text-2xl sm:text-3xl font-bold text-yellow-500">Fee: ₹{card.fee}</p>
 
-      <div className="mt-6 text-center">
+      <div className="mt-6 text-center space-y-4 ">
         <button
           onClick={handleDownloadClick}
-          className="p-4 bg-gradient-to-r from-blue-600 to-gray-400 text-white hover:from-gray-600 hover:to-blue-500 border-2 border-white rounded-lg mb-4 m-9"
+          className="p-4 bg-gradient-to-r from-blue-600 to-gray-400 text-white hover:from-gray-600 hover:to-blue-500 border-2 border-white rounded-lg w-full sm:w-auto sm:m-3"
         >
           Download Study Material
         </button>
 
         <button
           onClick={handlePlayClick}
-          className="p-4 bg-gradient-to-r from-green-400 to-green-600 text-white hover:from-green-600 hover:to-green-400 border-2 border-white rounded-lg"
+          className="p-4 bg-gradient-to-r from-green-400 to-green-600 text-white hover:from-green-600 hover:to-green-400 border-2 border-white rounded-lg w-full sm:w-auto"
         >
           Play Course
         </button>

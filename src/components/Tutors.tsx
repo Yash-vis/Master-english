@@ -50,7 +50,7 @@ const Tutors = () => {
     <div className="relative h-[30rem] overflow-hidden items-center justify-center flex">
     <WavyBackground className='w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full'>
         <h2 className='text-6xl text-center mb-8'>Meet our Trainers</h2>
-        <p className='mb-4'>Guiding You to Success with Expertise and Care</p>
+        <p className='sm:mb-4 mx-10 sm:mx-auto my-2 sm:my-0'>Guiding You to Success with Expertise and Care</p>
         <div className='flex flex-row items-center justify-center mb-10 w-full '>
         <AnimatedTooltip items={people} />
         </div>
