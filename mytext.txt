@@ -1,2 +1,0 @@
-this is my test which is for git
-committed
